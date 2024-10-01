@@ -1,3 +1,5 @@
+# type: ignore
+
 # First simply run the fast api app using uvicorn, and verify it is working
 # %%bash
 python app.py
@@ -218,7 +220,7 @@ docker stop $(docker ps -q)
 
 
 # Maybe you have also noticed that TAG has the value latest
-# This actually stands for the latest version of the image
+# This actually stands for the `latest` version of the image
 # So a tag can be used to specify a version of the image
 # For instance you can tag the image with a version number
 # You should notice, that the image has the same image id
@@ -232,22 +234,7 @@ docker tag <image_id> fhtw-hello-world
 docker build .
 
 
-
-
-
-# In order to stop a running container, you need to get the container id
-# the container id can be obtained by running the command below
-# With it you can see all runnnig containers and their container ids
+# enter the container
 # %%bash
-docker ps
-
-
-# %%bash
-docker stop <container_id>
-
-
-
-
-# %%bash
-docker build -t hello-world . 
-# %%
+docker exec -it fhtw-hello-app bash
+# navigate inside container
