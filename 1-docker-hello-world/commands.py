@@ -174,24 +174,38 @@ docker restart <container_id> OR <container_name>
 # Replace <container_id> with the container id
 # Or use the name instead of the id
 # %%bash
-docker rename <container_id> fastapi_app_debug
+docker rename monkey fhtw-hello-app
 
 # Inspect the logs of a running container
 # You can inspect the logs of a running container using the command below
 # You can always also use the container_id instead of the name
 # %%bash
-docker logs fastapi_app_debug
+docker logs fhtw-hello-app
 
 
 # If you want to keep the logs of a running container coming in
 # You can follow the logs of a running container using the command below
 # You can always also use the container_id instead of the name
 # %%bash
-docker logs -f fastapi_app_debug 
+docker logs -f fhtw-hello-app 
 
 # After running this command, you should see the logs of the container
 # Access the website you should see the logs of the container updating
 
+
+# Enter the container
+# A container is like a small virtual machine with its
+# own operatins system, its own file system, network interfaces, and processes
+# A running container can also be "entered", meaning, you can also acces that "vm"
+# You must run the command below inside a Terminal (not in Jupyter) 
+# to enter the container
+
+# %%bash
+docker exec -it fhtw-hello-app bash
+
+# If you are inside the container you should see the command prompt changing
+# You can browse around the file system, and run commands
+# You can exit the container by simply running `exit`
 
 
 # Now since we already told you that a container is an instance of an image
@@ -234,7 +248,5 @@ docker tag <image_id> fhtw-hello-world
 docker build .
 
 
-# enter the container
-# %%bash
-docker exec -it fhtw-hello-app bash
+
 # navigate inside container
