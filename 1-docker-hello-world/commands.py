@@ -1,4 +1,13 @@
 # type: ignore
+# make your terminal concise
+#%%bash
+export PS1="\W $ "
+
+# In order to run commands inside intactive window,
+# Run and install
+# %%bash
+!pip install -r requirements.txt
+!python -m bash_kernel.install
 
 # First simply run the fast api app using uvicorn, and verify it is working
 # %%bash

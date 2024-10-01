@@ -15,8 +15,8 @@
 				"ms-toolsai.jupyter"
 			]
 		}
-	}
-
+	},
+	"updateContentCommand": "python3 -m pip install -r requirements.txt; python3 -m bash_kernel.install"
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
