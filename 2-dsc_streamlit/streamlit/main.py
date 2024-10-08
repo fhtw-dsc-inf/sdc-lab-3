@@ -10,8 +10,6 @@ import io
 
 STYLES = config.STYLES
 
-st.set_option("deprecation.showfileUploaderEncoding", False)
-
 st.title("Style transfer web app")
 
 file = st.file_uploader("Choose an image")

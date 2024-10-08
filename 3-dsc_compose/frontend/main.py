@@ -20,8 +20,6 @@ STYLES = {
 
 env_backend_url = os.environ['APP_BACKEND_URL']
 
-st.set_option("deprecation.showfileUploaderEncoding", False)
-
 st.title("Style transfer web app")
 
 image = st.file_uploader("Choose an image")
