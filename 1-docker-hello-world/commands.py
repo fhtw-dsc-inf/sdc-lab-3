@@ -1,5 +1,21 @@
 # type: ignore
 
+# make your terminal concise
+# Pro tip make your terminal prompt more concise
+#%%bash
+#export PS1="\W $ "
+
+
+# echo test
+# try running below line in vs code cell execute
+# if it is being run using a python kernel, switch to the bash kernel
+#%%bash
+echo "hello test"
+
+# If you're still having issues, it means that vs code is unable to recognize the bash kernel
+# Please run all following commands inside a bash terminal
+
+
 # First simply run the fast api app using uvicorn, and verify it is working
 # %%bash
 python app.py

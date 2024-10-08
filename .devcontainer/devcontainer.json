@@ -15,8 +15,8 @@
 				"ms-toolsai.jupyter"
 			]
 		}
-	}
-
+	},
+	"updateContentCommand": "python3 -m pip install -r requirements.txt; python3 -m bash_kernel.install",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
@@ -25,6 +25,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "echo 'export PS1=\"\\W $ \"' >> /etc/bash.bashrc"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
